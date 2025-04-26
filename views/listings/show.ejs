@@ -25,6 +25,7 @@
 
     <br />
   </div>
+  <% if(currUser && listing.owner._id.equals(currUser._id)){%>
 
   <div class="btns mb-5">
     <a
@@ -36,9 +37,11 @@
       <button class="btn btn-dark offset-3">Delete</button>
     </form>
   </div>
+  <% } %>
 
   <div class="col-8 offset-3 mb-3">
     <hr />
+    <% if(currUser){ %>
     <h4>Leave a review</h4>
     <form
       method="POST"
@@ -73,12 +76,14 @@
       <button class="btn btn-outline-dark">Submit</button>
     </form>
     <hr />
+    <% } %>
+
     <p><b>All Reviews</b></p>
     <div class="row">
       <% for(review of listing.reviews){ %>
       <div class="card col-5 mb-3 ms-3">
         <div class="card-body">
-          <h5 class="card-title">Jane doe</h5>
+          <h5 class="card-title">@<%= review.author.username %></h5>
           <p class="card-text"><%= review.comment %></p>
           <p class="card-text"><%= review.rating %>stars</p>
         </div>
