@@ -9,13 +9,8 @@ const listingSchema = new Schema({
   },
   description: String,
   image: {
-    type: String,
-    default:
-      "https://unsplash.com/photos/snow-capped-mountains-peak-against-a-colorful-sunset-NLiKKKr3IbU",
-    set: (v) =>
-      v === ""
-        ? "https://unsplash.com/photos/snow-capped-mountains-peak-against-a-colorful-sunset-NLiKKKr3IbU"
-        : v,
+    filename: String,
+    url: String,
   },
   price: Number,
   location: String,
