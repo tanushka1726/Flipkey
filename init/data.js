@@ -36,7 +36,7 @@ const sampleListings = [
     country: "United States",
   },
   {
-    title: "Historic Villa in Tuscany",
+    title: "Historic place",
     description:
       "Experience the charm of Tuscany in this beautifully restored villa. Explore the rolling hills and vineyards.",
     image: {
